@@ -34,11 +34,10 @@ a {
     background-size: 100% 100%;
     padding-block:2.5em 13em;
 }
-.first_section,
-main,
-.footer,
-.mobile_nav {
-    padding-inline: 1.5em;
+.content {
+    width:90%;
+    margin-inline: auto;
+    max-width: 1095px;
 }
 .logo {
     width:9.5em;
@@ -62,6 +61,9 @@ header {
     background-color: var(--black);
     height:100vh;
     padding-top:2.5em;
+}
+.mobile_nav .content {
+    height: 100%;
 }
 .mobile_nav .links {
     position: relative;
@@ -87,7 +89,7 @@ header {
 .square{
     text-transform: uppercase;
     font-family: 'Josefin Sans', sans-serif;
-    font-size:2.6rem;
+    font-size:clamp(2.6rem, 2rem + 2.5vw, 5rem);
     color: var(--white);
     border:2px solid var(--white);
     padding:.5em;
@@ -105,7 +107,7 @@ header {
     text-transform: uppercase;
     font-family: 'Josefin Sans', sans-serif;
     color: var(--black);
-    font-size:2rem;
+    font-size:clamp(2rem,1.5rem + 2vw,3.4rem);
     font-weight: 300;
     margin-block:1em .5em;
 }
@@ -123,7 +125,7 @@ header {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     text-transform: uppercase;
-    font-size: 1.8rem;
+    font-size: clamp(1.8rem, 1.2rem + 2vw, 3rem);
     margin-bottom: 1.5em;
 }
 
@@ -142,7 +144,7 @@ header {
     text-transform: uppercase;
     color:var(--white);
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem,.6rem + 1.5vw,2rem);
 }
 
 .deep_earth {
@@ -227,10 +229,10 @@ header {
 @media(min-width:650px) {
     .first_section {
         background-image: url("../images/desktop/image-hero.jpg");
-        padding-bottom: 7em;
+        padding-block: 3.5em 7em;
     }
     .square {
-        margin-top:2em;
+        margin-top:1.7em;
     }
     .second_section {
         display: flex;
@@ -250,5 +252,94 @@ header {
     .nav_header ul {
         display: flex;
         gap:1em;
+    }
+}
+
+@media(min-width: 1000px) {
+    .nav_header ul {
+        gap:2em;
+    }
+    .second_section {
+        position:relative;
+    }
+    .main_info {
+        width:35em;
+        text-align: left;
+        position:absolute;
+        background-color: var(--white);
+        padding-left: 5em;
+        padding-top: 3em;
+        bottom: 0;
+        right: 0;
+    }
+    .third_section {
+        position: relative;
+        margin-top:8em;
+    }
+    .third_section h2 {
+        text-align: left;
+    }
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 450px 450px;
+        gap:1.5em;
+        margin-bottom: 9em;
+    }
+    .grid div {
+        height: auto;
+        padding:2em;
+    }
+    .deep_earth {
+        background-image: url("../images/desktop/image-deep-earth.jpg");
+    }
+    .night_arcade {
+        background: url("../images/desktop/image-night-arcade.jpg");
+    }
+    .soccer_team {
+        background-image: url(../images/desktop/image-soccer-team.jpg);
+    }
+    .the_grid {
+        background-image: url("../images/desktop/image-grid.jpg");
+    }
+    .from_up {
+        background-image: url("../images/desktop/image-from-above.jpg");
+    }
+    .pocket {
+        background-image: url("../images/desktop/image-pocket-borealis.jpg");
+    }
+    .curiosity {
+        background-image: url("../images/desktop/image-curiosity.jpg");
+    }
+    .fisheye {
+        background-image:url("../images/desktop/image-fisheye.jpg");
+    }
+
+    .button {
+        position: absolute;
+        top:0;
+        right:0;
+        margin-block: 0;
+    }
+
+    .footer .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav_footer .links {
+        display:flex;
+        gap:2em;
+    }
+    .nav_footer .links li {
+        text-align: left;
+    }
+    .fter_first-sec {
+        gap:1em;
+    }
+    .fter_second-sec {
+        margin-top: auto;
+    }
+    .fter_second-sec ul {
+        justify-content: flex-end;
     }
 }
