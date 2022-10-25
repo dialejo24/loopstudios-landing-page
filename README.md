@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Click](https://github.com/dialejo24/loopstudios-landing-page)
+- Live Site URL: [Click](https://dialejo24.github.io/loopstudios-landing-page/)
 
 ## My process
 
